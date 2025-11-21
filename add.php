@@ -1,5 +1,5 @@
 <?php
-    $password = "223611039";
+    $password = "100206";
 
     //mengenkripsi password
     $hash = password_hash($password, PASSWORD_DEFAULT);

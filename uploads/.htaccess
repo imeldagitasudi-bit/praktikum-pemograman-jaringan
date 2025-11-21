@@ -1,0 +1,14 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /api-php-native/public/
+
+    # Jika file atau folder tidak ada, arahkan ke index.php
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^ index.php [L]
+</IfModule>
+
+# Izinkan akses ke file PHP
+<FilesMatch "\.(php|phar|phtml)$">
+    Require all granted
+</FilesMatch>
